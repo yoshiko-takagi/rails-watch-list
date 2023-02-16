@@ -1,0 +1,8 @@
+<div class="container mt-3">
+  <%= simple_form_for @bookmark do |f| %>
+    <%= f.input :name %>
+    <%= f.association :movie_id %>
+    <%= f.association :list_id %>
+    <%= f.button :submit class: "btn btn-primary"%>
+  <% end %>
+</div>
