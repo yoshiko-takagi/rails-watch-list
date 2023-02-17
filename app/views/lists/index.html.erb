@@ -7,22 +7,31 @@
 </div>
 
 
-<div class="container mt-4">
+<div class="container mt-4 background-color">
   <h2>My Lists</h2>
 
 
-    <div class="d-flex content-justify-between mb-3 gap-3">
-      <% @lists.each do |list| %>
-      <div class="text-align-center text-white text-decoration-none">
-        <div class="card p-4 mb-3" style="width: 18rem; background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),  url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-          <p><%= link_to list.name, list_path(list) %></p>
+  <div class="d-flex content-justify-between mb-3 gap-3">
+    <% @lists.each do |list| %>
+    <div class="text-align-center text-white text-decoration-none">
+      <div class="card p-4 mb-3 text-align-center" style="width: 18rem; background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),  url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+        <p><%= link_to list.name, list_path(list) %></p>
 
-        </div>
-        <% end %>
       </div>
+      <% end %>
     </div>
+  </div>
 
-
+  <%# <div class="container my-5">
+    <div class="cards">
+      <% @lists.each do  |list| %>
+        <%# <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)"> %>
+          <%#= list.name %>
+          <%#= link_to '', list_path(list), class: 'card-category-link'%>
+        <%# </div> %>
+      <%# end %>
+    <%# </div>
+  </div> %>
 
   <div class="btn btn-success">
     <p class="text-white text-decoration-none"><%= link_to 'Create new list', new_list_path %></p>
