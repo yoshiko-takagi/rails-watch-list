@@ -10,7 +10,6 @@
 <div class="container mt-4 background-color">
   <h2>My Lists</h2>
 
-
   <div class="d-flex content-justify-between mb-3 gap-3">
     <% @lists.each do |list| %>
     <div class="text-align-center text-white text-decoration-none">
@@ -36,4 +35,14 @@
   <div class="btn btn-success">
     <p class="text-white text-decoration-none"><%= link_to 'Create new list', new_list_path %></p>
   </div>
+
+  <!-- app/views/articles/index.html.erb -->
+  <%= cl_image_tag("gew1kq0dq8uc5masn6wv", width: 400, height: 300, crop: :fill) %>
+
+  <!-- for face detection -->
+  <%= cl_image_tag("cld-sample", width: 150, height: 150, crop: :thumb, gravity: :face) %>
+
+
+
+
 </div>
