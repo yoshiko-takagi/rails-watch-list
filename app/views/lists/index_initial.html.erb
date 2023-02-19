@@ -1,0 +1,36 @@
+
+<div class="banner pt-5 pb-5" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1536440136628-849c177e76a1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y2luZW1hfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=700&q=60);">
+    <div class="container text-center text-white font-size-lg">
+      <h1><strong>MOVIE WATCH LIST</strong></h1>
+      <h4>Watch a movie, Change your life</h4>
+    </div>
+</div>
+
+
+<div class="container mt-4 background-color">
+  <h2>My Lists</h2>
+
+
+  <% @lists.each do |list| %>
+  <div class="card-category mb-3"
+    style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<% link_to list.name, list_path(list) %>')">
+    <p><%= link_to list.name, list_path(list) %></p>
+  </div>
+  <% end %>
+
+  <div class="d-flex content-justify-between mb-3 gap-3">
+    <% @lists.each do |list| %>
+    <div class="text-align-center text-white text-decoration-none">
+      <div class="card p-4 mb-3 text-align-center" style="width: 18rem; background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),  url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+        <p><%= link_to list.name, list_path(list) %></p>
+
+      </div>
+      <% end %>
+    </div>
+  </div>
+
+
+  <div class="btn btn-success">
+    <p class="text-white text-decoration-none"><%= link_to 'Create new list', new_list_path %></p>
+  </div>
+</div>
