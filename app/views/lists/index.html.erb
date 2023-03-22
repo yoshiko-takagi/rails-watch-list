@@ -1,21 +1,18 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1536440136628-849c177e76a1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y2luZW1hfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=700&q=60);">
   <div class="container">
-    <h1>MOVIE WATCH LIST</h1>
-  </div>
-</div>
-
-<div class="container m-5">
-  <div class="d-flex justify-content-between mb-3">
-    <h2>My list</h2>
+    <h1>Movie Watch List</h1>
     <%= link_to "Create a new list", new_list_path, class: "btn btn-flat" %>
   </div>
-
+</div>
+<div class="container my-4">
+  <div class="d-flex justify-content-between mb-3">
+    <h2>My lists</h2>
+  </div>
   <div class="cards">
     <% @lists.each do |list| %>
       <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= list.photo.attached? ? cl_image_path(list.photo.key) : list.image_url %>)">
         <p><%= link_to list.name, list_path(list), class: "text-light text-decoration-none" %></p>
-    </div>
-      <% end %>
+      </div>
+    <% end %>
   </div>
-
 </div>
