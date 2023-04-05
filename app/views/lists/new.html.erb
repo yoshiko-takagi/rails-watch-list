@@ -1,4 +1,10 @@
 <div class="container mt-3">
+  <div class="d-flex justify-content-start align-item-center">
+    <%= link_to "/"%>
+    <span class="fs-3 lighter">Lists
+    </span>
+    <h2>Create</h2>
+  </div>
   <%= simple_form_for @list do |f| %>
     <%= f.input :name %>
     <%= f.input :photo, as: :file %>
