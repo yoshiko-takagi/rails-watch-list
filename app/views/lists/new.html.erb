@@ -1,10 +1,8 @@
 <div class="container mt-3">
-  <div class="d-flex justify-content-start align-item-center">
-    <%= link_to "/"%>
-    <span class="fs-3 lighter">Lists
-    </span>
-    <h2>Create</h2>
-  </div>
+  <%# <div class="d-flex justify-content-start align-item-center"> %>
+  <p><%= link_to "Movie Lists >", root_path, class: "text-dark text-decoration-none" %></p>
+  <h2>Create a new list</h2>
+  <%# </div> %>
   <%= simple_form_for @list do |f| %>
     <%= f.input :name %>
     <%= f.input :photo, as: :file %>
