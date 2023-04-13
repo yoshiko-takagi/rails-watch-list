@@ -5,12 +5,12 @@
       <div class="card-trip mb-3">
         <%= image_tag bookmark.movie.poster_url, width: 300 %>
         <div class="card-trip-infos">
-          <h2><%= bookmark.movie.title %></h2>
-          <p>Rating <%= bookmark.movie.rating.to_f %></p>
           <div>
+            <h2><%= bookmark.movie.title %></h2>
             <p><strong>Reviews</strong></p>
             <p><%= bookmark.comment %></p>
           </div>
+          <p>Rating <%= bookmark.movie.rating.to_f %></p>
         </div>
       </div>
     <% end %>
